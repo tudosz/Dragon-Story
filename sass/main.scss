@@ -1,0 +1,150 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    border: 2px solid green;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw; // max-width: 1000px;
+    .row {
+        // border: 1px solid blue;
+        &:after,
+        &:before {
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+        [class*='col-'] {
+            float: left;
+            min-height: 150px;
+            box-sizing: border-box;
+        }
+        @for $i from 1 through 8 {
+            .col-#{$i} {
+                width: 13% * $i;
+            }
+        }
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 9px solid red;
+    border-left: 9px solid red;
+    border-right: 9px solid red; // border-left: 8px dashed goldenrod;
+    // border-right: 8px dashed goldenrod;
+    background-color: red;
+}
+
+.first {
+    align-items: stretch;
+    flex-grow: 4;
+    border-top: 9px dashed goldenrod;
+    border-left: 9px dashed goldenrod;
+    border-right: 9px dashed goldenrod;
+    background-color: red;
+}
+
+.second {
+    display: flex;
+    height: 150px;
+    justify-content: space-between;
+    background-color: red;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    border: 2px solid red;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Press Start 2P', cursive;
+    color: goldenrod;
+    font-size: 76px;
+    transition: color 2s ease-out;
+}
+
+.title:hover {
+    color: gold;
+}
+
+.col-1 {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 8px dashed goldenrod;
+    border-left: 8px dashed goldenrod;
+    border-right: 8px dashed goldenrod;
+    background-color: red;
+}
+
+.one {
+    padding-left: none;
+}
+
+.seven {
+    padding-right: none;
+}
+
+.first-slide {
+    background-color: #1E90FF;
+    .row {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.characterIntro {
+    margin: 20px;
+    border-top: 4px solid #bf9b30;
+    border-left: 4px solid #bf9b30;
+    border-right: 4px solid goldenrod;
+    border-bottom: 4px solid goldenrod;
+    background-color: #ffbf00;
+    h2 {
+        font-family: 'Press Start 2P', cursive;
+        color: goldenrod;
+        padding: 10px;
+    }
+}
+
+.characterIntro:hover {
+    background-color: goldenrod;
+    border-top: 4px solid goldenrod;
+    border-left: 4px solid goldenrod;
+    border-right: 4px solid #bf9b30;
+    border-bottom: 4px solid #bf9b30;
+    h2 {
+        color: gold;
+    }
+}
+
+.characters {
+    list-style-type: none;
+    margin: 30px;
+    li {
+         display: inline-block;
+    }
+}
+.charactersGallery div {
+    // display: none;
+}
+.selected {
+    background-color:  gold;
+}
+.visible {
+    display: block;
+}
