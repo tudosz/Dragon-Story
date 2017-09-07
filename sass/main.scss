@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
 }
 
 * {
@@ -38,9 +39,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-top: 9px solid red;
-    border-left: 9px solid red;
-    border-right: 9px solid red; // border-left: 8px dashed goldenrod;
+    // border-top: 9px solid red;
+    // border-left: 9px solid red;
+    // border-right: 9px solid red; 
+    // border-left: 8px dashed goldenrod;
     // border-right: 8px dashed goldenrod;
     background-color: red;
 }
@@ -51,20 +53,25 @@
     border-top: 9px dashed goldenrod;
     border-left: 9px dashed goldenrod;
     border-right: 9px dashed goldenrod;
+    border-bottom: 18px solid red;
     background-color: red;
 }
 
 .second {
     display: flex;
     height: 150px;
+    border-left: 9px dashed goldenrod;
+    border-right: 9px dashed goldenrod;
     justify-content: space-between;
     background-color: red;
 }
 
+
+
 section {
     width: 100%;
     height: 100vh;
-    border: 2px solid red;
+    // border: 2px solid red;
 }
 
 .title {
@@ -81,16 +88,23 @@ section {
 .title:hover {
     color: gold;
 }
-
+.second {
+    justify-content: space-between;
 .col-1 {
     display: flex;
     flex-direction: row;
-    border-bottom: 8px dashed goldenrod;
-    border-left: 8px dashed goldenrod;
-    border-right: 8px dashed goldenrod;
+    border-bottom: 9px dashed goldenrod;
+    border-left: 9px dashed goldenrod;
+    border-right: 9px dashed goldenrod;
     background-color: red;
 }
-
+}
+.one {
+    border-left: none;
+}
+.seven {
+    border-right: none;
+}
 .one {
     padding-left: none;
 }
@@ -147,4 +161,101 @@ section {
 }
 .visible {
     display: block;
+}
+.introductionTitle {
+    color: goldenrod;
+    display: block;
+    font-size: 38px;
+    padding: 20px;
+}
+.row {
+    h2 {
+        color: brown;
+    }
+}
+.scroll {
+     background-image: url(../img/pergaminone.gif);
+    background-size: cover;
+}
+.second-slide {
+    background-image: url(../img/pergaminonestart.png);
+    background-size: cover;
+}
+.third-slide {
+    background-image: url(../img/pergaminone-33.png);
+    background-size: cover;
+}
+.fourth-slide {
+    background-image: url(../img/pergaminone-33.png);
+    background-size: cover;
+}
+.fifth-slide {
+    background-image: url(../img/pergaminone-33.png);
+    background-size: cover;
+}
+.sixth-slide {
+    background-image: url(../img/pergaminonefinish.png);
+    background-size: cover;
+}
+.pergamin1 {
+    background-image: url(../img/ivyframe.png);
+    background-size: cover;
+    margin-bottom: 30px;
+    margin-left: 110px;
+
+    p {
+        padding:150px 30px 40px 40px;
+    }
+}
+
+.pergamin2 {
+    background-image: url(../img/ivyframe.png);
+    background-size: cover;
+    margin-bottom: 30px;
+    margin-left: 110px;
+    p {
+        padding:110px 30px 40px 40px;
+    }
+}
+.pergamin3 {
+    background-image: url(../img/ivyframe.png);
+    background-size: cover;
+    margin-bottom: 30px;
+    margin-left: 110px;
+    p {
+        padding:100px 30px 40px 40px;
+    }
+}
+.pergamin4 {
+    background-image: url(../img/ivyframe.png);
+    background-size: cover;
+    margin-bottom: 30px;
+    margin-left: 110px;
+    p {
+        padding:100px 30px 40px 40px;
+    }
+}
+.pergamin5 {
+    background-image: url(../img/ivyframe.png);
+    background-size: cover;
+    margin-bottom: 130px;
+    margin-left: 110px;
+    p {
+        padding:100px 30px 40px 40px;
+    }
+}
+.row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    .col-2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+}
+.classy-frame {
+    background-image: url(../img/framemedthree.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
