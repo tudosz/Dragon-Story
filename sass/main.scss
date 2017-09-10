@@ -143,13 +143,15 @@ section {
 }
 
 .first-slide {
-    background-color: #1E90FF;
+    // background-color: #1E90FF;
     .row {
         display: flex;
         justify-content: space-around;
     }
 }
-
+introductionTitle {
+    font-size: 80px;
+}
 .characterIntro {
     margin: 20px;
     border-top: 4px solid #bf9b30;
@@ -234,7 +236,9 @@ section {
         color: brown;
     }
 }
-
+.end {
+    opacity: 0;
+}
 .scroll {
     background-image: url(../img/pergaminone-1.png);
     background-size: cover;

@@ -11,8 +11,24 @@ $(document).ready(function () {
     var slide6 = $('.sixth-slide');
     var menu = $('.hamburger-shell');
     var row = $('.row');
+    var endEl = $('#end');
+    var endText = $('.end');
     console.log(liEle);
     console.log(divEle);
+
+    // $(endEl).click(function(){
+    //     $('section').addClass('nonvisible').queue(function(){
+
+        
+    //     $(endText).animate({
+    //         bottom: '250px',
+    //         fontSize: '150px',
+    //         color: 'brown',
+    //         height: '150px',
+    //         width: '150px'
+    //     });
+    //     });
+    // });
     
     $(scrollEl).on('click', function(){
         $(scrollEl).css('background-image','url(img/pergaminone.gif)');
