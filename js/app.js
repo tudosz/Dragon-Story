@@ -3,11 +3,13 @@ $(document).ready(function () {
     var scrollEl= $('.scroll');
     var liEle = $('.characters li');
     var divEle = $('.charactersGallery div');
+    var div2Ele = $('.charactersGallery2 div');
     var slide2 = $('.second-slide');
     var slide3 = $('.third-slide');
     var slide4 = $('.fourth-slide');
     var slide5 = $('.fifth-slide');
     var slide6 = $('.sixth-slide');
+    var menu = $('.hamburger-shell');
     var row = $('.row');
     console.log(liEle);
     console.log(divEle);
@@ -22,6 +24,7 @@ $(document).ready(function () {
             $(slide4).removeClass('nonvisible');
             $(slide5).removeClass('nonvisible');
             $(slide6).removeClass('nonvisible');
+            $(menu).removeClass('nonvisible');
             
         });
     })
@@ -35,64 +38,61 @@ $(document).ready(function () {
         console.log($(divEle[thisTab]));
         console.log('działa');
     });
+    $(liEle[4]).on('dblclick', function(){
+        var thisTab = $(this).index();
+        console.log($(divEle[4]));
+        console.log($(div2Ele[0]))
+        $(divEle[4]).hide();
+        $(div2Ele[0]).fadeIn(600);
+   });
+//Paralax
+$(window).on('scroll',function(){
+console.log(Math.round(window.scrollY));
+$('body').css({
+    'background-position-y': Math.round(window.scrollY)
+})
 
-    var span1El = $('.pergamin1 span');
-    var frame1El = $('.frame1 img');
+});
+//Paralax
+
+
+    var span1El = $('.pergamin span');
+    var frame1El = $('.frame img');
+    var spans = $('span');
     console.log(span1El);
     console.log(frame1El);
     
-        $(span1El).on('click', function(){
-            var thisTab = $(this).index();
+        $(span1El).on('click', function(){ 
             $(frame1El).hide();
-            $(frame1El[thisTab]).fadeIn(600);
-            console.log($(frame1El[thisTab]));
+            $(`img.${$(this).attr('class')}`).fadeIn(600);
+            console.log(this);           
         });
+//menu
 
-    var span2El = $('.pergamin2 span');
-    var frame2El = $('.frame2 img');
-    console.log(span2El);
-    console.log(frame2El);
-    
-        $(span2El).on('click', function(){
-            var thisTab = $(this).index();
-            $(frame2El).hide();
-            $(frame2El[thisTab]).fadeIn(600);
-            console.log($(frame2El[thisTab]));
-        });
+	$('.hamburger-shell').click(function(){
+		$('#menu').slideToggle(300);
+		$('.top').toggleClass('rotate');
+		$('.middle').toggleClass('rotate-back');
+		$('.menu-name').toggleClass('bump');
+		$('.bg-cover').toggleClass('reveal');
+	});
+	$('.bg-cover').click(function(){
+		$('#menu').slideToggle(300);
+		$('.top').toggleClass('rotate');
+		$('.middle').toggleClass('rotate-back');
+		$('.menu-name').toggleClass('bump');
+		$('.bg-cover').toggleClass('reveal');
+	})
 
-    var span3El = $('.pergamin3 span');
-    var frame3El = $('.frame3 div');
-    console.log(span3El);
-    console.log(frame3El);
-    
-        $(span3El).on('click', function(){
-            var thisTab = $(this).index();
-            $(frame3El).hide();
-            $(frame3El[thisTab]).fadeIn(600);
-            console.log($(frame3El[thisTab]));
-        });
 
-    var span4El = $('.pergamin4 span');
-    var frame4El = $('.frame4 div');
-    console.log(span4El);
-    console.log(frame4El);
-    
-        $(span4El).on('click', function(){
-            var thisTab = $(this).index();
-            $(frame4El).hide();
-            $(frame4El[thisTab]).fadeIn(600);
-            console.log($(frame4El[thisTab]));
+//menu
+//scrolling
+$('a').on('click', function (event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 2500);
         });
-    
-    var span5El = $('.pergamin5 span');
-    var frame5El = $('.frame5 div');
-    console.log(span5El);
-    console.log(frame5El);
-    
-        $(span5El).on('click', function(){
-            var thisTab = $(this).index();
-            $(frame5El).hide();
-            $(frame5El[thisTab]).fadeIn(600);
-            console.log($(frame5El[thisTab]));
-        });
+//scrolling        
 });
